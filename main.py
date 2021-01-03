@@ -15,4 +15,4 @@ labels = { key: f'{key}: {values}' for [key, values] in G.nodes.data() }
 fig, ax1 = plt.subplots(nrows=1, ncols=1, figsize=(15, 8))
 nx.draw(G, ax=ax1, labels=labels, with_labels=True)
 
-fig.savefig('/mnt/c/users/santi/Pictures/graph.png')
+fig.savefig('./graph.png')
