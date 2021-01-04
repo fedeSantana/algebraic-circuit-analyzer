@@ -5,9 +5,17 @@ from sympy import Symbol # https://github.com/sympy/sympy/blob/master/sympy/core
 from sympy import I # type: ignore
 from typing import Optional
 
-class Nodo:
+
+
+
+
+# NetworkX documentation
+# node_for_adding (node) – A node can be any hashable Python object except None.
+# attr (keyword arguments, optional) – Set or change node attributes using key=value.
+class Node:
     def __init__(self, name: str):
         self.name = name
+    
 
 class Orientation:
     def __init__(self, name: str):
@@ -17,8 +25,8 @@ class BasicComponent:
     def __init__(
         self,
         name: str, 
-        nodo1: Nodo, 
-        nodo2: Nodo, 
+        nodo1: Node, 
+        nodo2: Node, 
         value : Optional[float] = None, # If is Float can be int, here why: https://www.python.org/dev/peps/pep-0484/#the-numeric-tower
         orientation : Optional[Orientation] = None
         ):
